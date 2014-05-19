@@ -9,8 +9,7 @@ define([
 
     var Soundcloud = function() {};
     Soundcloud.prototype.load = function(id) {
-        var iframe = document.getElementById('sc-widget');
-        var widget = window.SC.Widget(iframe);
+        var widget = window.SC.Widget('sc-widget');
         var newSoundUrl = 'http://api.soundcloud.com/tracks/' + id;
         widget.load(newSoundUrl, {
             show_artwork: false
