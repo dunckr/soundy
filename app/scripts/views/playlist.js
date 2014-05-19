@@ -2,8 +2,9 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'templates'
-], function ($, _, Backbone, JST) {
+    'templates',
+    'services/soundcloud'
+], function ($, _, Backbone, JST, Soundcloud) {
     'use strict';
 
     var PlaylistView = Backbone.View.extend({
@@ -11,16 +12,25 @@ define([
 
         el: '#playlist',
 
+        events: {
+          'click li': 'clicked'
+        },
+
         initialize: function () {
             this.render();
             this.collection.bind('add', this.render, this);
-
         },
 
         render: function () {
-            console.log(this.collection.toJSON());
             this.$el.html(this.template({ collection: this.collection.toJSON() }));
             return this;
+        },
+
+        clicked: function(e) {
+            var id = $(e.target).text().trim();
+            console.log(id);
+
+            Soundcloud.load(id);
         }
     });
 

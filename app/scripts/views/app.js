@@ -8,8 +8,8 @@ define([
     'views/search',
     'views/playlist',
     'collections/playlist',
-    'soundcloud'
-], function ($, _, Backbone, JST, PlayerApi, PlayerView, SearchView, PlaylistView, Playlist, Soundcloud) {
+    'soundApi'
+], function ($, _, Backbone, JST, PlayerApi, PlayerView, SearchView, PlaylistView, Playlist, SoundApi) {
     'use strict';
 
     var AppView = Backbone.View.extend({

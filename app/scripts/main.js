@@ -13,7 +13,7 @@ require.config({
         underscore: '../bower_components/underscore/underscore',
         bootstrap: '../bower_components/sass-bootstrap/dist/js/bootstrap',
         playerApi: 'https://w.soundcloud.com/player/api',
-        soundcloud: 'http://connect.soundcloud.com/sdk'
+        soundApi: 'http://connect.soundcloud.com/sdk'
     }
 });
 

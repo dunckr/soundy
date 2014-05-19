@@ -29,7 +29,7 @@ define([
             if (e.keyCode === 13) {
                 var query = this.$('searchInput').val();
                 var self = this;
-                Soundcloud.get('/tracks', { q: query }, function(tracks) {
+                window.SC.get('/tracks', { q: query }, function(tracks) {
                     self.collection.add(tracks);
                 });
             }

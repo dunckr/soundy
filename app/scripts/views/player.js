@@ -15,9 +15,7 @@ define([
         initialize: function () {
             this.render();
             this.collection.bind('add', function() {
-                console.log('we have added shit');
             });
-
         },
 
         render: function () {
